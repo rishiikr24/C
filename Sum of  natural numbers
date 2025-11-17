@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int nSum(int n) { // Change return type to int
+    if (n == 0) {
+        return 0; // Base case
+    } else {
+        return n + nSum(n - 1); // Correctly accumulate the sum
+    }
+}
+
+int main() {
+    int number = nSum(10); // Calculate the sum of first 10 natural numbers
+    printf("THE SUM OF FIRST N NATURAL NUMBERS IS %d\n", number); // Added newline for better formatting
+    return 0; // Return 0 to indicate successful completion
+}
